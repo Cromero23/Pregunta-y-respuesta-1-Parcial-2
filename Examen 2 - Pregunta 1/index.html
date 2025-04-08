@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Libros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Crear cuenta en Tienda de Libros</h1>
+  <form id="formulario">
+    <label>Nombre: <input type="text" id="nombre" required></label><br>
+    <label>Apellidos: <input type="text" id="apellidos" required></label><br>
+    <label>Teléfono: <input type="text" id="telefono" placeholder="123 45 67 89" required></label><br>
+    <label>Password: <input type="password" id="password" minlength="8" required></label><br>
+    <label>Áreas de interés:<br>
+      <input type="checkbox" name="interes" value="programacion"> Programación<br>
+      <input type="checkbox" name="interes" value="diseno"> Diseño<br>
+      <input type="checkbox" name="interes" value="ciencias"> Ciencias<br>
+    </label>
+    <label>Fecha de nacimiento: <input type="date" id="fecha" required></label><br>
+    <label>
+      <input type="checkbox" id="acepta" required> Acepto los términos de protección de datos
+    </label><br>
+    <button type="button" id="agregarBtn">Agregar</button>
+  </form>
+
+  <div id="libros" class="hidden">
+    <h2>Selecciona tus libros</h2>
+    <label>Libro:
+      <select id="libro">
+        <option value="El Quijote" data-precio="259.99">El Quijote - $259.99</option>
+        <option value="1984" data-precio="189.50">1984 - $189.50</option>
+        <option value="Cien Años de Soledad" data-precio="240.40">Cien Años de Soledad - $240.40</option>
+      </select>
+    </label><br>
+
+    <label>Precio (MXN): <input type="number" id="precio" step="0.01" required></label><br>
+    <label>IVA:
+      <select id="iva">
+        <option value="0.10">Reducido (10%)</option>
+        <option value="0.21">Normal (21%)</option>
+      </select>
+    </label><br>
+
+    <label>Resultado (MXN): <input type="text" id="resultado" readonly></label><br>
+    <button type="button" id="calcularBtn">Calcular</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
